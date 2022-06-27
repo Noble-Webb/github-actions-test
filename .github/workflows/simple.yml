@@ -16,3 +16,11 @@ jobs:
         run: |
           print('Will this work?')
         shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: Bash
