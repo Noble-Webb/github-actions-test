@@ -14,5 +14,5 @@ jobs:
           npm -v
       - name: python Command
         run: |
-          print("play with me")
+          print('play with me')
           shell: python
