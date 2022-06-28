@@ -17,5 +17,8 @@ jobs:
         run: |
           pwd
           ls 
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_SHA 
       - name: Checkout Action
         uses: actions/checkout@v1
