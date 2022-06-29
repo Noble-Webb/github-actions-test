@@ -20,5 +20,6 @@ jobs:
           echo $GITHUB_WORKSPACE
           echo $GITHUB_REPOSITORY
           echo $GITHUB_SHA 
+          echo $GITHUB
       - name: Checkout Action
         uses: actions/checkout@v1
