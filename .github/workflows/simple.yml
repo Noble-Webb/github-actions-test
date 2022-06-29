@@ -1,27 +1,27 @@
-# name: Shell Commands
+name: Shell Commands
 
-# on: [push]
+on: [push]
 
-# jobs:
-#   run-shell-command:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: echo a string
-#         run: echo "Hello World"
-#       - name: multiline script
-#         run: |
-#           node -v
-#           npm -v
-#       - name: python Command
-#         run: |
-#           print('Will this work?')
-#         shell: python
-#   run-windows-commands:
-#     runs-on: windows-latest
-#     needs: ['run-shell-command']
-#     steps:
-#       - name: Directory Powershell
-#         run: Get-Location
-#       - name: Directory Bash
-#         run: pwd
-#         shell: Bash
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: python Command
+        run: |
+          print('Will this work?')
+        shell: python
+  run-windows-commands:
+    runs-on: windows-latest
+    needs: ['run-shell-command']
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: Bash
