@@ -1,0 +1,15 @@
+name: Actions Workflow
+
+on:
+  push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+
+jobs:
+  run-action-types:
+   runs-on: ubuntu-latest
+   steps:
+     - name: List Files and Directory
+       run: |
+         pwd
+         ls

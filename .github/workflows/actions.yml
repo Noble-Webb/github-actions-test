@@ -1,25 +1,25 @@
-name: Actions Workflow
+# name: Actions Workflow
 
-on: [push]
+# on: [push]
 
-jobs:
-  run-github-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Simple JS Action 
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with: 
-          who-to-greet: Tom
-      - name: Log time
-        run: echo "${{steps.greet.outputs.time}}"
-      - name: List Files
-        run: |
-          pwd
-          ls 
-          echo $GITHUB_WORKSPACE
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_SHA 
-          echo $GITHUB
-      - name: Checkout Action
-        uses: actions/checkout@v1
+# jobs:
+#   run-github-actions:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Simple JS Action 
+#         id: greet
+#         uses: actions/hello-world-javascript-action@v1
+#         with: 
+#           who-to-greet: Tom
+#       - name: Log time
+#         run: echo "${{steps.greet.outputs.time}}"
+#       - name: List Files
+#         run: |
+#           pwd
+#           ls 
+#           echo $GITHUB_WORKSPACE
+#           echo $GITHUB_REPOSITORY
+#           echo $GITHUB_SHA 
+           
+#       - name: Checkout Action
+#         uses: actions/checkout@v1
